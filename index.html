@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md bg-white rounded shadow p-6">
+      <!-- Header -->
+      <header class="bg-blue-500 text-white text-center py-4 mb-4">
+        <h1 class="text-2xl font-bold">To-Do List</h1>
+      </header>
+
+      <!-- Input Section -->
+      <form id="todo-form" class="flex mb-4">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Enter a new to-do"
+          class="flex-grow px-3 py-2 border rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-blue-500 text-white px-4 py-2 rounded-r hover:bg-blue-600 focus:outline-none"
+        >
+          Add
+        </button>
+      </form>
+
+      <!-- To-Do List -->
+      <ul id="todo-list" class="space-y-2">
+        <!-- To-Do Items will be appended here dynamically -->
+      </ul>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
